@@ -24,7 +24,7 @@ builder.Services.AddControllers();
 
 // Add book context using dependency injections
 
-builder.Services.AddDbContext<BookContext>(o => o.UseSqlite("Data source = books.db"));
+builder.Services.AddDbContext<BookContext>(options => options.UseSqlite("Data source = books.db"));
 
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 
